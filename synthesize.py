@@ -21,7 +21,7 @@ def synthesize_group(group: pd.DataFrame):
 	timeseries_synthesizer.fit(
 		group,
 		ydata_synthetic.synthesizers.TrainParameters(
-			epochs           = 5,#0,#000,
+			epochs           = 50,#000,
 			sequence_length  = 24,
 			number_sequences = len(group.columns),
 		),
@@ -33,9 +33,9 @@ def synthesize_group(group: pd.DataFrame):
 
 
 def main():
-	failure_groups_meta = pd.read_parquet('preprocessed_data/group_meta.parquet')
+	failure_groups_meta = pd.read_parquet('data/preprocessed/group_meta.parquet')
 	failure_groups = [
-		pd.read_parquet(f'preprocessed_data/group_{group_index}.parquet')
+		pd.read_parquet(f'data/preprocessed/group_{group_index}.parquet')
 		for group_index in range(failure_groups_meta.shape[0])
 	]
 
@@ -50,7 +50,7 @@ def main():
 
 		for (j, synthesized_group_block) in enumerate(synthesized_data):
 			print(group_index, j)
-			synthesized_group_block.to_parquet(f'synthesized_data/versuch1/group_{group_index}_{j}.parquet')
+			synthesized_group_block.to_parquet(f'data/synthesized/versuch2/group_{group_index}_{j}.parquet')
 
 if __name__ == "__main__":
 	main()

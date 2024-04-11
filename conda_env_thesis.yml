@@ -1,9 +1,0 @@
-name: SyntheticDataGeneration
-channels:
-  - conda-forge
-dependencies:
-  - python=3.10
-  - jupyter
-  - pandas
-  - pyarrow
-  - ydata-synthetic

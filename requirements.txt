@@ -1,5 +1,7 @@
-jupyter
-pandas
-pyarrow
-ydate-profiling
-ydata-synthetic
+numpy #for numerical computation
+jupyter #for notebook
+pandas #for data manipulation
+pyarrow #for parquet file format
+scikit-learn #sklearn for clustering
+ydate-profiling #for data profiling
+ydata-synthetic #for synthetic data generation

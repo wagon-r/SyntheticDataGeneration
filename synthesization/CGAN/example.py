@@ -1,5 +1,6 @@
 """
     CGAN architecture example file
+    source: https://github.com/ydataai/ydata-synthetic/blob/dev/examples/regular/models/creditcard_cgan.py
 """
 import pandas as pd
 from sklearn import cluster

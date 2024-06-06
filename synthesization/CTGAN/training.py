@@ -6,7 +6,7 @@ from ydata_synthetic.synthesizers import ModelParameters, TrainParameters
 from ydata_synthetic.synthesizers.regular import RegularSynthesizer
 
 # Read the original data and have it preprocessed
-data = pd.read_parquet(f'E:\m2hycon\Thesis\SyntheticDataGeneration\synthesization\CTGAN/v6-truncated-20ts.parquet')
+data = pd.read_parquet(f'../../data/preprocessed/v6-truncated-20ts.parquet')
 data.dropna(inplace=True, axis=0)
 
 cat_cols = [
